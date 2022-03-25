@@ -20,6 +20,6 @@ const categorySchema = new mongoose.Schema({
     }
 })
 
-const Category = mongoose.model('payment', categorySchema)
+const Payment = mongoose.model('payment', categorySchema)
 
-module.exports = Category
+module.exports = Payment

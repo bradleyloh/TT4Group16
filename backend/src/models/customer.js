@@ -4,6 +4,7 @@ const categorySchema = new mongoose.Schema({
     CustomerId: {
         type: Number,
         required: true,
+        unique: true,
     },
     customer_name: {
         type: String,
@@ -20,13 +21,9 @@ const categorySchema = new mongoose.Schema({
     balance: {
         type: Number,
         required: true
-    },
-    password: {
-        type: String,
-        required: true
     }
 })
 
-const Category = mongoose.model('customer', categorySchema)
+const Customer = mongoose.model('customer', categorySchema)
 
-module.exports = Category
+module.exports = Customer

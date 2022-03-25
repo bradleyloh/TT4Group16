@@ -9,10 +9,9 @@ const categorySchema = new mongoose.Schema({
     loan_amount: {
         type: Number,
         required: true
-    },
-
+    }
 })
 
-const Category = mongoose.model('loan', categorySchema)
+const Loan = mongoose.model('loan', categorySchema)
 
-module.exports = Category
+module.exports = Loan

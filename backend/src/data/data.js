@@ -229,4 +229,4 @@ const loans = [
     }
   ]
 
-export{customers, customer_loans, loans, payments}
+module.exports = {customers, customer_loans, loans, payments}

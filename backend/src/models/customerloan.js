@@ -16,6 +16,6 @@ const categorySchema = new mongoose.Schema({
     }
 })
 
-const Category = mongoose.model('customerloan', categorySchema)
+const Customerloan = mongoose.model('customerloan', categorySchema)
 
-module.exports = Category
+module.exports = Customerloan

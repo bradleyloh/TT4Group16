@@ -1,31 +1,21 @@
 const express = require('express')
 const Customer = require('../models/customer')
-const Penguin = require('../models/penguin')
 const router = new express.Router()
 
-router.get('/penguin', async(req,res)=>{
-    try {
-        const data = await Penguin.find({})
-        res.send(data)
-    } catch(e){
-        res.status(500).send(e)
-    }
-})
-
+// Return everything in table
 router.get('/customers', async (req, res) => {
     try {
         const customers = await Customer.find({})
-        res.json(customers)
+        res.send(customers.balance)
     } catch(e) {
-        //console.log(e)
         res.status(500).send(e)}
 })
 
-// Return everything 1 row from customer base on id
+// Return everything 1 row from customer base on id [2]
 router.get('/customers/:id', async (req, res) => {
     try {
-        const product = await Customer.find({id: req.params.id})
-        res.send(product)
+        const customer = await Customer.find({id: req.params.id})
+        res.send(customer.balance)
     } catch(e) {res.status(500).send(e)}
 })
 
