@@ -13,22 +13,29 @@ router.get('/loans/:id', async (req, res) => {
     } catch(e) {res.status(500).send(e)}
 })
 
+// router.post('/loan/create/:id', async(req,res) => {
+//     try{ 
+//         const payment = await Payment.
+//     }
+// })
+
 // PATCH one product to change its quantity [6]
-router.patch('/loans-pay/:id', async (req, res) => {
+router.patch('/loan/update/:id', async (req, res) => {
     try {
         const payment = await Payment.findOne({PaymentId: req.params.id})
         payment.amount = req.body.amount
         await payment.save()
 
-        const Loan = await Loan.findOne({LoanId: req.params.Id})
+        const loan = await Loan.findOne({LoanId: req.params.Id})
+        loan.amount -= req.body.amount
         await Loan.save()
         
         res.send("updated")
     } catch(e) {res.status(400).send(e)}
 })
 
-// Insert new loan to customerloan and loan tables
-router.post('/loan/:id', async (req,res) => {
+// Insert new loan to customerloan and loan tables [5] (CustomerId)
+router.post('/loan/create/:id', async (req,res) => {
     req.body.map(async pdt =>{
         const newloan = new Customerloan({... pdt})
         try {

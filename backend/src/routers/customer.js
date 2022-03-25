@@ -14,18 +14,18 @@ router.get('/customers', async (req, res) => {
 // Return everything 1 row from customer base on id [2]
 router.get('/customers/:id', async (req, res) => {
     try {
-        const customer = await Customer.find({id: req.params.id})
+        const customer = await Customer.find({CustomerId: req.params.id})
         res.send(customer.balance)
     } catch(e) {res.status(500).send(e)}
 })
 
 // Authentication [1]
-router.post('/login', async (req, res) => {
-    try{
-        const customer = await Customer.findOne({username: req.body.phone, password: req.body.password})
-        if (!customer) {return res.send(404)}
-        res.send(customer)
-    } catch(e) {res.status(500).send(e)}
-})
+// router.post('/login', async (req, res) => {
+//     try{
+//         const customer = await Customer.findOne({username: req.body.phone, password: req.body.password})
+//         if (!customer) {return res.send(404)}
+//         res.send(customer)
+//     } catch(e) {res.status(500).send(e)}
+// })
 
 module.exports = router
