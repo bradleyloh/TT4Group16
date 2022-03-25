@@ -41,17 +41,17 @@ function Login() {
   }, [ user, navigate ]);
 
   return (
-    <form className="form" onSubmit={handleSubmit}>
-      <h3>{values.hasAccount ? 'Login' : 'Register'}</h3>
+    <form className="form" style={{textAlign: "center", alignItems: "center"}} onSubmit={handleSubmit}>
+      <h2>{values.hasAccount ? 'Login' : 'Register'}</h2>
       {showAlert && <Alert />}
       {!values.hasAccount && (<FormRow type="text" name="name" value={values.name} handleChange={handleChange} labelText="Name" />)}
       {!values.hasAccount && (<FormRow type="text" name="address" value={values.address} handleChange={handleChange} labelText="Address" />)}
       <FormRow type="text" name="phone" value={values.phone} handleChange={handleChange} labelText="Phone number" />
       <FormRow type="password" name="password" value={values.password} handleChange={handleChange} labelText="Password" />
-      <button type="submit" disabled={isLoading}>Submit</button>
+      <button style={{marginTop: "0.5rem"}} type="submit" disabled={isLoading}>Submit</button>
       <div>
         {values.hasAccount ? 'Not a member yet?' : 'Already a member?'}
-            <button type='button' onClick={toggleMember}>
+            <button style={{marginTop: "0.5rem", marginLeft: "0.5rem"}} type='button' onClick={toggleMember}>
               {values.hasAccount ? 'Register' : 'Login'}
             </button>
       </div>

@@ -39,7 +39,7 @@ function Homepage() {
             {loans && loans.map(function(loan) {
                 return <tr key={loan.id}>
                   <td>{loan.amount}</td>
-                  <td>{loan.outstanding}</td>
+                  <td>{loan.outstandingAmount}</td>
                   <td><Link to={`/loan/view?id=${loan.id}`}>View</Link></td>
                   <td><Link to={`/loan/payment?id=${loan.id}`}>Make payment</Link></td>
                 </tr>

@@ -30,7 +30,7 @@ const getUserLoans = async function (userId) {
     try {
         const result = await axios({
             method: 'get',
-            url: `/loan/all/${userId}`
+            url: `http://localhost:3002/loan/all/${userId}`
         })
 
         return result.data;
@@ -45,7 +45,7 @@ const getUserLoansAndCall = async function (setLoans, setHistory, id) {
     const outstandingLoans = [];
     for (let i = 0; i < allLoans.length; i++) {
         const thisData = allLoans[i];
-        if (thisData.isFullyPaid) {
+        if (thisData.outstandingAmount === 0) {
             fullyPaidLoans.push(allLoans[i]);
         } else {
             outstandingLoans.push(allLoans[i]);
@@ -60,7 +60,7 @@ const createLoan = async function (obj) {
     try {
         const result = await axios({
             method: 'post',
-            url: '/loan/create',
+            url: 'http://localhost:3002/loan/create',
             data: obj
         })
 
@@ -74,7 +74,7 @@ const makePayment = async function (obj) {
     try {
         const result = await axios({
             method: 'post',
-            url: '/loan/payment',
+            url: 'http://localhost:3002/loan/payment',
             data: obj
         })
 
