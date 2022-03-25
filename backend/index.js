@@ -2,7 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
 // Set mongoose here
-mongoose.connect('')
+mongoose.connect('mongodb+srv://bradleyloh:dbsseed123%21%40%23@cluster0.zgytf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
 
 const customerRouter = require('./routers/customer')
 
