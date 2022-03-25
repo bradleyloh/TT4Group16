@@ -1,0 +1,42 @@
+[
+    {
+      "LoanId": 1,
+      "loan_amount": 135532.99
+    },
+    {
+      "LoanId": 2,
+      "loan_amount": 34367.53
+    },
+    {
+      "LoanId": 3,
+      "loan_amount": 45086.74
+    },
+    {
+      "LoanId": 4,
+      "loan_amount": 140123.37
+    },
+    {
+      "LoanId": 5,
+      "loan_amount": 57800.21
+    },
+    {
+      "LoanId": 6,
+      "loan_amount": 13165.14
+    },
+    {
+      "LoanId": 7,
+      "loan_amount": 82062.24
+    },
+    {
+      "LoanId": 8,
+      "loan_amount": 12416.32
+    },
+    {
+      "LoanId": 9,
+      "loan_amount": 17250.83
+    },
+    {
+      "LoanId": 10,
+      "loan_amount": 46431.85
+    }
+  ]

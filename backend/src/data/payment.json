@@ -1,0 +1,62 @@
+[
+    {
+      "PaymentId": 1,
+      "LoanId": 1,
+      "payment_date": "2022-02-20",
+      "payment_amount": 35532.99
+    },
+    {
+      "PaymentId": 2,
+      "LoanId": 6,
+      "payment_date": "2022-03-19",
+      "payment_amount": 7818.63
+    },
+    {
+      "PaymentId": 3,
+      "LoanId": 4,
+      "payment_date": "2022-01-12",
+      "payment_amount": 74562.54
+    },
+    {
+      "PaymentId": 4,
+      "LoanId": 4,
+      "payment_date": "2022-03-21",
+      "payment_amount": 51364.06
+    },
+    {
+      "PaymentId": 5,
+      "LoanId": 3,
+      "payment_date": "2022-01-17",
+      "payment_amount": 16363.67
+    },
+    {
+      "PaymentId": 6,
+      "LoanId": 1,
+      "payment_date": "2022-01-03",
+      "payment_amount": 26544.58
+    },
+    {
+      "PaymentId": 7,
+      "LoanId": 1,
+      "payment_date": "2022-02-27",
+      "payment_amount": 30534.71
+    },
+    {
+      "PaymentId": 8,
+      "LoanId": 9,
+      "payment_date": "2022-02-27",
+      "payment_amount": 17250.83
+    },
+    {
+      "PaymentId": 9,
+      "LoanId": 2,
+      "payment_date": "2022-02-19",
+      "payment_amount": 34367.53
+    },
+    {
+      "PaymentId": 10,
+      "LoanId": 7,
+      "payment_date": "2022-02-08",
+      "payment_amount": 31003.82
+    }
+  ]
