@@ -54,8 +54,8 @@ app.post("/register", async (req, res) => {
         res.status(201).json(user);
       } catch (err) {
         console.log(err);
+        res.send(err);
       }
-
 });
 
 // Login
@@ -90,6 +90,7 @@ app.post("/login", (req, res) => {
         res.status(400).send("Invalid Credentials");
       } catch (err) {
         console.log(err);
+        res.send(err)
       }
 });
 
