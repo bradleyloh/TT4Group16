@@ -1,0 +1,52 @@
+[
+    {
+      "CustomerLoanId": 1,
+      "CustomerId": 7,
+      "LoanId": 6
+    },
+    {
+      "CustomerLoanId": 2,
+      "CustomerId": 8,
+      "LoanId": 8
+    },
+    {
+      "CustomerLoanId": 3,
+      "CustomerId": 8,
+      "LoanId": 7
+    },
+    {
+      "CustomerLoanId": 4,
+      "CustomerId": 8,
+      "LoanId": 1
+    },
+    {
+      "CustomerLoanId": 5,
+      "CustomerId": 8,
+      "LoanId": 10
+    },
+    {
+      "CustomerLoanId": 6,
+      "CustomerId": 7,
+      "LoanId": 9
+    },
+    {
+      "CustomerLoanId": 7,
+      "CustomerId": 5,
+      "LoanId": 3
+    },
+    {
+      "CustomerLoanId": 8,
+      "CustomerId": 2,
+      "LoanId": 2
+    },
+    {
+      "CustomerLoanId": 9,
+      "CustomerId": 4,
+      "LoanId": 4
+    },
+    {
+      "CustomerLoanId": 10,
+      "CustomerId": 4,
+      "LoanId": 5
+    }
+  ]
