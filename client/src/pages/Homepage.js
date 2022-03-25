@@ -9,6 +9,10 @@ function Homepage() {
 
   return (
     <main>
+      <div>
+        Welcome back!
+        <button type="button">Logout</button>
+      </div>
       <div className="account-balance">
         Account Balance:
       </div>
