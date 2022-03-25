@@ -26,11 +26,11 @@ import axios from 'axios';
 //     }
 // }
 
-const getUserLoans = async function (id) {
+const getUserLoans = async function (userId) {
     try {
         const result = await axios({
             method: 'get',
-            url: '/loan/all'
+            url: `/loan/all/${userId}`
         })
 
         return result.data;
@@ -56,11 +56,12 @@ const getUserLoansAndCall = async function (setLoans, setHistory, id) {
     setHistory(fullyPaidLoans);
 }
 
-const createLoan = async function (id, amount) {
+const createLoan = async function (obj) {
     try {
         const result = await axios({
             method: 'post',
-            url: '/loan/create'
+            url: '/loan/create',
+            data: obj
         })
 
         return result.data;
@@ -69,11 +70,12 @@ const createLoan = async function (id, amount) {
     }
 }
 
-const makePayment = async function (id) {
+const makePayment = async function (obj) {
     try {
         const result = await axios({
             method: 'post',
-            url: '/loan/payment'
+            url: '/loan/payment',
+            data: obj
         })
 
         return result.data;
@@ -86,4 +88,4 @@ const getLoanPayments = async function () {
 
 }
 
-export { getUserLoans, getLoanPayments, getUserLoansAndCall }
+export { getUserLoans, getLoanPayments, getUserLoansAndCall, createLoan, makePayment }
